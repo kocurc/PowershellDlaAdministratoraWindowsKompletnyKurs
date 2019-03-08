@@ -1,0 +1,13 @@
+1.      Wylistuj obiekty WMI, które w nazwie zawierają *network*.  Odszukaj klas, które mogą mieć coś wspólnego z konfiguracją kart sieciowych
+
+2.      Wykonaj tą samą czynność dla klas CIM
+
+3.      Korzystając z metod WMI i CIM: Wyświetl obiekty klasy WIN32_NetworkAdapter
+
+4.      Korzystając z metod WMI i CIM: Sprawdź jakie właściwości i metody ma obiekt klasy Win32_NetworkAdapter
+
+5.      Korzystając z metod WMI i CIM: Wyświetl dla każdego obiektu z poprzednich punktów tylko właściwość Caption oraz MACAddress.
+
+6.      Korzystając z metod WMI i CIM: Zbadaj, czy komputer na jakim pracujesz jest wirtualny. W tym celu wyświetl klasę Win32_BIOS
+
+7.      Korzystając z metod WMI i CIM: Korzystając z klasy Win32_UserAccount wyświetl listę lokalnych użytkowników komputeraa

@@ -1,0 +1,23 @@
+1.      Utwórz kilka plików w wybranym katalogu (tutaj c:\temp)
+
+2.      Zadeklaruj zmienną $files i przypisz do niej wynik polecenia Get-ChildItem listującego zawartość folderu c:\temp
+
+3.      Napisz pętlę foreach,która dla każdego pliku z kolekcji $files:
+
+a.      Zaszyfruj ten plik (wywołaj metodę Encrypt() dla bieżącego elementu kolekcji)
+
+b.      Zmień atrybut ReadOnly na $true. Wykorzystaj w tym celu właściwość ReadOnly bieżącego elementu kolekcji
+
+4.      Sprawdź czy pliki  są zaszyfrowane i mają ustawiony atrybut tylko do odczytu (skorzystaj np. z eksploratora windows)
+
+5.      Napisz koleją pętlę foreach, która:
+
+a.      Odszyfruje pliki
+
+b.      Wygasi atrybut tylko do odczytu
+
+6.      Polecenia
+
+a.      [console]::beep(500,300) – powoduje wygenerowanie dźwięku (500 Hz, 300 ms)
+
+b.      Start-Sleep – zatrzymuje działanie skryptu na określony czas Napisz pętlę for, która wygeneruje 5 dźwięków w odstępach jednosekundowych

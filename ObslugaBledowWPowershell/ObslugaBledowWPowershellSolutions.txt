@@ -1,0 +1,30 @@
+$bits = Get-WmiObject -Class Win32_Service -Name BITS
+
+$bits.StartMode
+
+$bits.ChangeStartMode('Disabled')
+
+Stop-Service bits, winrm
+
+Get-Service bits, winrm | select -Property Status
+
+$ErrorActionPreference
+
+Start-Service bits, winrm
+
+Get-Service bits, winrm | select -Property Status
+
+$ErrorActionPreference='Stop'
+
+Stop-Service bits, winrm
+
+Get-Service bits, winrm | select -Property Status
+
+Start-Service bits, winrm
+
+Get-Service bits, winrm | select -Property Status
+
+$ErrorActionPreference='Continue'
+Start-Service bits, winrm
+
+Get-Service bits, winrm | select -Property Status

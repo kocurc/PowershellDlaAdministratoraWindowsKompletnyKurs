@@ -1,0 +1,13 @@
+1.      Włącz remoting na lokalnym komputerze korzystając z opcji SkipNetworkProfileCheck, aby pominąć krok sprawdzania czy wśród połączeń sieciowych znajdują się takie które są sklasyfikowane jako publiczne.
+
+2.      Nawiąż połączenie do komputera lokalnego za pomocą polecenia Enter-PSSession
+
+3.      Wyświetl nazwę komputera, do którego połączenie zostało nawiązane
+
+4.      Zakończ połączenie
+
+5.      Uruchom na systemie zdalnym polecenie wyświetlające nazwę komputera w sposób wsadowy (nieinteraktywny) korzystając z polecenia Invoke-Command
+
+6.      Wyświetl wszystkie właściwości zwrócone przez zdalnie uruchomione polecenia
+
+7.      Zwróć uwagę, że wśród właściwości znajduje się PSComputerName, które zawiera informacje o komputerze na którym polecenie było wykonywane. Wyświetl PSComputerName.

@@ -1,0 +1,13 @@
+1.      Utwórz plik „services.txt” o zawartości                wuauserv                bits
+
+2.      Wczytaj zawartość pliku.
+
+3.      Połącz polecenie z poprzedniego punktu potokiem z poleceniem zatrzymującą usługi o nazwach takich jak wpisane w pliku. (Pamiętaj o uruchomieniu powershella jako administrator)
+
+4.      Zmień polecenie z poprzedniego punktu tak, aby te usługi były uruchamiane.
+
+5.      Dodaj do poprzedniego polecenia dodatkową instrukcję powodującą wyświetlenie napisu „Starting …”. W miejscu kropek ma się pojawić nazwa startowanej usługi. (Kiedy w jednym bloku chcesz uruchamiać kilka komend rozdziel je znakiem średnika).
+
+6.      Dodaj blok poleceń wykonywany przed uruchamianiem usług, który wyświetli komunikat „STARTING SERVICES”. (Jeśli komenda jest zbyt długa, to możesz zakończyć linijkę znakiem ` - odwrócony apostrof – na klawiaturze na tym samym klawiszu co tylda ~. Dla Powershella to informacja, że ciąg dalszy komendy znajduje się poniżej.)
+
+7.      Dodaj blok poleceń uruchamianych po uruchomieniu lub zatrzymaniu usług, który wyświetli komunikat „DONE”.

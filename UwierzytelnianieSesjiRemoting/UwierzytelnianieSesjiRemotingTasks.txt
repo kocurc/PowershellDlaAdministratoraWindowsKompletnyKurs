@@ -1,0 +1,23 @@
+1.      Wyświetl okno pytające o dane uwierzytelnienia bez żadnych dodatkowych parametrów
+
+2.      Wyświetl okno pytające o dane uwierzytelnienia. Niech komunikat wyświetlany w oknie będzie następujący: „Enter username and password from MYDOMAIN”
+
+3.      Wyświetl okno pytające o dane uwierzytelnienia:
+
+a.      Komunikat w oknie – „Enter Password”
+
+b.      Wstępnie wypełniona nazwa użytkownika – w postaci <nazwa komputera lokalnego>\Administrator
+
+c.      Wartość zwracana ma być zapisana do zmiennej $adminCred
+
+4.       Wyświetl opcje klienta protokołu WSMAN
+
+5.      Wyświetl wartość opcji TrustedHosts korzystając z polecenia Get-Item
+
+6.      Zmień wartość opcji TrustedHosts na *
+
+7.      Wyświetl wartość opcji TrustedHosts
+
+8.      Zapisz do zmiennej $currentValue aktualną wartość opcji TrustedHosts. Sprawdź zawartość tej zmiennej
+
+9.      Korzystając z danych uwierzytelnienia pobranych w kroku (3) uruchom na lokalnym komputerze skrypt wyświetlający „Current user is $($env:USERNAME) Uwaga! Jeśli konto administratora na bieżącym komputerze  jest zablokowane (wyłączone) to skorzystaj z innego konta. 

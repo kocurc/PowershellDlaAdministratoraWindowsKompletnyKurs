@@ -1,0 +1,15 @@
+1.      Twoim zadaniem będzie przekopiować plik między dwoma komputerami. Aby uniknąć błędu w pierwszej kolejności sprawdzisz czy zdalny komputer odpowiada na ping. Wykonaj testowe sprawdzenie łączności ze zdalnym komputerem za pomocą polecenia Test-Connection. Postaraj się aby polecenie:
+
+a.      Zwracało wynik prawda/falsz
+
+b.      W przypadku niedostępności zdalnego komputera na ekranie nie pojawiał się komunikat o błędzie
+
+c.      Wykonywało test tylko w oparciu o odpowiedź na pojedynczy pakiet ping
+
+2.      Wynik polecenia Test-Connection zapamiętaj w zmiennej $isAlive
+
+3.      Wykorzystaj zmienną $isAlive w warunku polecenia if. Jeśli warunek jest spełniony plik ma być kopiowany z komputera lokalnego na zdalny
+
+4.      Dodaj do polecenia wyrażenie else. W przypadku braku łączności z komputerem zdalnym wyświetl komunikat „remote host is not responding”
+
+5.      Napisz polecenie, które uruchomi usługę tylko o ile aktualnie ta usługa nie jest uruchomiona. Przed i po uruchomieniu usługi dodaj polecenia wyświetlające na ekranie dodatkowe komunikaty. Dodaj do poprzedniej instrukcji polecenie else, które w przypadku gdy usługa już działa wyświetli komunikat „Service is already running”

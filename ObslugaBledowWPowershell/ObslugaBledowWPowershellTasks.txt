@@ -1,0 +1,31 @@
+1.      Aby obsłużyć błąd najpierw sprowokujemy jego wystąpienie. W tym celu najpierw wyłączymy usługę bits. Do zmiennej bits pobierz za pomocą Get-WmiObject usługę bits.
+
+2.      Sprawdź aktualny status usługi (właściwość StartMode)
+
+3.      Korzystając z metody ChangeStartMode zmień tryb uruchomienia na Disabled
+
+4.      Zatrzymaj usługi bits i winrm
+
+5.      Sprawdź czy usługi są rzeczywiście zatrzymane.
+
+6.      Sprawdź wartość zmiennej $ErrorActionPreference (powinna wynosić Continue)
+
+7.      Wpisz polecenia uruchamiające bits i winrm i uruchom je jednocześnie. Przy uruchamianiu usługi bits powinien pojawić się błąd.
+
+8.      Sprawdź status usług bits i winrm. Czy winrm działa? Dlaczego?
+
+9.      Zmień wartość globalnej zmiennej ErrorActionPreference na Stop.
+
+10.   Zatrzymaj usługi bits i winrm
+
+11.   Sprawdź czy usługi są rzeczywiście zatrzymane.
+
+12.   Wpisz polecenia uruchamiające bits i winrm i uruchom je jednocześnie. Przy uruchamianiu usługi bits powinien pojawić się błąd.
+
+13.   Sprawdź status usług bits i winrm. Czy winrm działa? Dlaczego?
+
+14.   Zmień polecenie uruchamiające usługi tak aby niezależnie od wartości globalnej zmiennej ErrorActionPreference, jeśli dochodzi do błędu kolejne polecenia były wykonywane bez zgłaszania komunikatów o błędzie.
+
+15.   Sprawdź status usług bits i winrm. Czy winrm działa? Dlaczego?
+
+16.   Przywróć początkowe ustawienia trybu uruchomienia usługi bits. 

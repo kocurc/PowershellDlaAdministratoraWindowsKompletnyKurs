@@ -1,0 +1,31 @@
+1.      Wyświetl polecenia pozwalające na modyfikację i wyświetlania opcji związanych z CREDSSP
+
+2.      Zezwól na przekazywanie poświadczeń:
+
+a.      Uruchom gpedit.msc
+
+b.      Przejdź do Local Security Policy >> Computer Configuration >> Administrative Templates >> System >> Credentials delegation >> Allow delegating fresh credentials with NTLM-only server authorization
+
+c.      Przełącz stan na Enabled
+
+d.      Kliknij “Show” obok Add servers to list I wpisz wsman/<nazwa twojego komputera>
+
+3.      Sprawdź czy delegowanie poświadczeń jest wyłączone. Gdyby delegowanie było włączone, wyłącz je.
+
+4.      W tym zadaniu symulujemy sytuację połączenia z serwera A do B i dalej do C. Aby zadanie można było wykonać nawet dysponując jednym komputerem połączenie jest nawiązywane z lokalnego komputera do lokalnego komputera a następnie znowu do tego samego lokalnego komputera. Otwórz połączenie do  swojego komputera z wykorzystaniem Enter-PSSession
+
+5.      Mając otwarte połączenie zdalne, w ramach tej zdalnej sesji uruchom kolejne polecenie remotingu (do tego samego komputera): Invoke-Command wyświetlające datę i czas. Polecenie powinno zakończyć się błędem, bo nie jest jeszcze skonfigurowane przekazywanie poświadczeń.
+
+6.      Zamknij otwarte połączenie zdalne.
+
+7.      Skonfiguruj komputer do przekazywania poświadczeń:
+
+a.      Jako klient do przekazywania poświadczeń do komputera zdalnego
+
+b.      Jako serwer do przyjmowania poświadczeń
+
+8.      Sprawdź bieżącą konfigurację CredSSP
+
+9.      Połącz się do komputera z wykorzystaniem Enter-PSSession przekazując parametr -Authentication CredSSP oraz -Credential (Get-Credential)
+
+10.   W sesji zdalnej wykonaj ponownie polecenie Invoke-Command jak w pkt. (5). Tym razem polecenie powinno zadziałać. Potem zakończ sesję zdalną

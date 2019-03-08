@@ -1,0 +1,33 @@
+1.      W katalogu c:\temp trzeba będzie utworzyć pewien zestaw podkatalogów. Nazwy tych katalogów będą docelowo znajdować się w pliku c:\temp\subdirs.txt. Na razie jednak zacznij od zadeklarowania tablicy $subdirs, której elementami będą napisy:
+
+a.      01_Input
+
+b.      02_Processing
+
+c.      03_Results
+
+2.      Zadeklaruj zmienną BaseDir i zainicjuj ją wartością ‘c:\temp\’.
+
+3.      Przekaż zmienną $subdirs potokiem do polecenia foreach-object, które na razie tylko wyświetli zawartość poszczególnych elementów tablicy.
+
+4.      Zmień polecenie w ForEach-Object tak aby wyświetlało całą ścieżkę powstałą z połaczenia zmiennej BaseDir z w danej chwili przetwarzanym podkatalogiem
+
+5.      Zmień polecenie w ForEach-Object z wyświetlającego bieżący element na tworzące katalog
+
+6.      Korzystając z potoku i polecenia Out-File umieść zawartość zmiennej $subdirs w pliku c:\temp\subdirs.txt.
+
+7.      Wyświetl zawartość tego pliku
+
+8.      Zmień polecenie z punktu (4) tak, aby nazwy podkatalogów wczytywać z pliku, a nie korzystać ze zmiennej $subdirs
+
+9.      Korzystając z notatnika zmień nazwy katalogów zapisane w pliku c:\temp\subdirs.txt na:
+
+a.      A_Input
+
+b.      B_Processing
+
+c.      C_Results
+
+d.      D_Temporary
+
+10.   Zmień polecenie z punktu (8), tak aby tworzyło podkatalogi (podobnie jak to robiłeś w pkt. (5)). Uruchom polecenie.

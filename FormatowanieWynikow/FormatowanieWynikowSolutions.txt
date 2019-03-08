@@ -1,0 +1,13 @@
+Get-WMIObject -Class Win32_Desktop
+
+Get-WMIObject -Class Win32_Desktop | FW -Property Name
+
+Get-WMIObject -Class Win32_Desktop | FW -Property Name -Column 5
+
+Get-WMIObject -Class Win32_Desktop | Format-Table
+
+Get-WMIObject -Class Win32_Desktop | Format-List
+
+Get-WMIObject -Class Win32_Desktop | Select Name, ScreenSaverActive | FT
+
+Get-WmiObject -Class win32_desktop | Out-GridView

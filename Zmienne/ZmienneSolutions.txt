@@ -1,0 +1,19 @@
+$MyService = "bits"
+
+Get-Service $MyService
+
+$EventLogName = "System"
+
+$EventNumber = 5
+
+Get-EventLog -Newest $EventNumber -LogName $EventLogName
+
+Get-ChildItem ENV:
+
+$MyComputerName = "zzz"
+$MyOperatingSystem = "Windows 10"
+$MyUserName = "yyy"
+
+$env:COMPUTERNAME
+$env:OS
+$env:USERNAME

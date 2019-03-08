@@ -1,0 +1,21 @@
+1.      W tym zadaniu należy przygotować zestaw plików o nazwach 1.txt, 2.txt itd. W efekcie powstanie skrypt, który zrealizuje to zadanie. Kolejne punkty realizowane krok po kroku pokierują cię jak to zrobić.
+
+2.       Zadeklaruj zmienne $i i $max. Zainicjuj je wartościami 0 i 30
+
+3.      Zadeklaruj zmienną $sourceFileName i zainicjuj ją wartością ‘c:\temp\master.txt’
+
+4.      Umieść w pliku wskazywanym przez $sourceFileName napis „This is a master configuration file”
+
+5.      Zadeklaruj zmienną $destinationFolder i zainicjuj ją wartością ‘c:\temp\distribution’
+
+6.      Skonstruuj wyrażenie IF, które sprawdza istnienie katalogu wskazywanego przez $destinationFolder i jeśli nie ma takiego folderu to go tworzy. (Skorzystaj z funkcji Test-Path)
+
+7.      Przygotuj pętlę WHILE, która będzie wykonywana tak długo póki $i jest mniejsze od $max
+
+8.      W pętli dodaj instrukcję zwiększającą $i o 1.
+
+9.      Zadeklaruj zmienną $destinationFile i zainicjuj ją wartością w postaci $i.txt
+
+10.   Korzystając z polecenia Join-Path połącz nazwę $destinationFolder z $destinationFile i zapamiętaj wynik w zmiennej $newFileName
+
+11.   Skopiuj plik $sourceFile na  $newFileName  i wyświetl komunikat „File … has been created” Przetestuj działanie poleceń

@@ -1,0 +1,11 @@
+1.      Utwórz na lokalnym dysku plik tekstowy, np. FileToCopy.txt w katalogu c:\temp.
+
+2.      Przygotuj i uruchom polecenie kopiujące ten plik na zasób sieciowy, np. \\server01\C$\temp\NewFile.txt Po uruchomieniu polecenie zakończy się błędem
+
+3.      Korzystając z instrukcji try catch zmień polecenie tak, aby w przypadku błędu wyświetlało komunikat „file cannot be copied”
+
+4.      Zmień polecenie wyświetlające komunikat o błędzie tak aby wskazać na przyczynę błędu (skorzystaj ze zmiennej $Error[0].Exception.Message)
+
+5.      Dodaj za instrukcją kopiującą plik polecenie wyświetlające komunikat „file copied”
+
+6.      Zmień polecenie kopiujące plik tak aby nie było błędu (zmień np. ścieżkę docelową na poprawną). Uruchom polecenie w aktualnej postaci i upewnij się, że komunikat dodany w kroku (5) został wyświetlony. 

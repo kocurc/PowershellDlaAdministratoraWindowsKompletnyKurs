@@ -1,0 +1,11 @@
+1.      Wyświetl dostępne wolumeny dyskowe
+
+2.      Skonstruuj polecenie, które wyświetli informacje tylko o wtych wolumenach dyskowych, które są przekazywane potokiem rozpoczynającym się od: ‘C’ | …. (jeśli na tym etapie otrzymujesz błąd – kontynuuj do następnego kroku)
+
+3.      Wyświetl help dotyczący Get-Volume. Zwróć uwagę na to, jak można przekazywać potokiem wartość dla parametru DriveLetter
+
+4.      Skonstruuj polecenie, który zmieni nazwę kolumny na „DriveLetter” dla potoku rozpoczynającego się od ‘C’ | ….
+
+5.      Korzystając z potoku z poprzedniego zadania połącz go z poleceniem Get-Volume, tak aby wyświetlane były tylko informacje o wolumenach przekazywanych potokiem.
+
+6.      Jak wykonać to samo zadanie z wykorzystaniem ForEach?

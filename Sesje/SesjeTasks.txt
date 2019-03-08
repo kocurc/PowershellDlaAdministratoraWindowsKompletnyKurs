@@ -1,0 +1,29 @@
+1.      W tym zadaniu chodzi o skorelowanie pewnych czynności które mają być wykonywane w określonej kolejności na kilku maszynach. My oczywiście ze względu na brak wielu komputerów wykonamy wszystko na localhost ale zastosujemy logikę, która może być przeniesiona na inne komputery:
+
+a.      Utwórz obiekt sesji $sessionComp1 wskazujący na localhost
+
+b.      Utwórz obiekt sesji $sessionComp2 wskazujący na localhost
+
+2.      Wyświetl dostępne w tej chwili sesje
+
+3.      Korzystając z sesji do pierwszego komputera zapytaj o stan usługi bits i zapisz go w zdalnej zmiennej $bitStatus
+
+4.      Do lokalnej zmiennej $bitStatusComp1 wpisz wartość ze zmiennej z poprzedniego punktu (skorzystaj z właściwości Value zwracanej przez Invoke-Command)
+
+5.      Korzystając z sesji do drugiego komputera zapytaj o stan usługi wsearch i zapisz go w zdalnej zmiennej $wsearchStatus
+
+6.      Do lokalnej zmiennej $wsearchStatusComp2 wpisz wartość ze zmiennej z poprzedniego punktu (skorzystaj z właściwości Value zwracanej przez Invoke-Command)
+
+7.      Jeśli jednocześnie są spełnione warunki:
+
+a.      Usługa bits była w statusie ‘stopped’
+
+b.      Usługa wsearch była w statusie ‘running’
+
+Wykonaj następujące czynności:
+
+c.      Uruchom usługę bits w sesji numer 1
+
+d.      Zatrzymaj usługę wsearch w sesji numer 2
+
+8.      Usuń wszystkie sesje. 

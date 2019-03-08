@@ -1,0 +1,27 @@
+1.      Załóżmy, że planujesz wielokrotnie wykonywać polecenie Get-Service dla usługi wsearch. Dodaj odpowiedni parametr domyślny:
+
+a.      Polecenie: Get-Service
+
+b.      Parametr: Name
+
+c.      Wartość: wsearch
+
+2.      Przetestuj działanie polecenia Get-Service bez dodatkowych parametrów
+
+3.      Utwórz (z poziomu powershell) katalog: c:\users\<nazwa użytkownika>Documents\WindowsPowerShell
+
+4.      Utwórz (z poziomu powershell) plik profile.ps1 we wcześniej wymienionym katalogu
+
+5.      Wyedytuj (np. w notatniku) ten plik
+
+6.      Umieść w nim (poniższe polecenia należy oczywiście testować najpierw w powershell:
+
+a.      Powitanie użytkownika – skorzystaj z $env:username
+
+b.      Informację o nazwie komputera na jakim pracujesz – skorzystaj ze zmiennej $env:computername
+
+c.      Utwórz wirtualny napęd TEMP: zmapowany do katalogu c:\temp
+
+7.      Upewnij się, że execution policy pozwala na uruchamianie skryptów, a jeśli nie to zmień execution policy na RemoteSigned
+
+8.      Otwórz nową sesję powershell (np. w ISE File >> New PowershellTab). Upewnij się, że profil został uruchomiony poprawnie. 

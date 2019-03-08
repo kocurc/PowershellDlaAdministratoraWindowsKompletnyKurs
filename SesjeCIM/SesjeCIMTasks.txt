@@ -1,0 +1,19 @@
+1.      Korzystając ze zmiennej $env:COMPUTERNAME sprawdź nazwę komputera, na którym obecnie pracujesz. Tej nazwy będziemy używać w kolejnych zadaniach. Jeżeli masz do dyspozycji więcej komputerów, możesz wykonywać kolejne polecenia względem innego komputera. Jeśli nie, to sesje będziemy nawiązywać z komputerem lokalnym używając przed chwilą ustalonej nazwy.
+
+2.      Korzystając z obiektu sesji podłącz się do komputera zdalnego i sprawdź jaki na nim jest zainstalowany system operacyjny. (Skorzystaj z klasy Win32_OperatingSystem)
+
+3.      Korzystając z obiektu sesji podłącz się do komputera zdalnego i sprawdź jakie aplikacje są na nim zainstalowane. (Skorzystaj z klasy Win32_Product)
+
+4.      Zauważ dodatkową kolumnę PSComputerName informującą o tym z jakiego komputera dane są pobierane.
+
+5.      Wyświetl aktualnie dostępne sesje
+
+6.      Usuń wszystkie sesje
+
+7.      Utwórz obiekt sesji oparty o protokół DCOM
+
+8.      Utwórz obiekt sesji do wybranego komputera z wykorzystaniem przed chwilą utworzonego obiektu sesji.
+
+9.      Korzystając z obiektu sesji wyświetl informacje o drukarkach dostępnych na zdalnym komputerze.
+
+10.   Usuń wszystkie obiekty sesji

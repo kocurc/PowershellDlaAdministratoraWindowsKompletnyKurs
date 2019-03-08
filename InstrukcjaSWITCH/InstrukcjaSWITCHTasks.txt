@@ -1,0 +1,25 @@
+1.      Poniższe polecenie wyświetla informacje o statusie zainstalowanego oprogramowania na komputerze, w tym informacje o stanie aktywacji licencji: Get-WmiObject -Class SoftwareLicensingProduct  -Filter "Name LIKE '%Windows%' AND PartialProductKey <> null"
+
+2.      Upewnij się że polecenie zwraca rekord odpowiedzialny za system windows i zapisz go w zmiennej $license.
+
+3.      Sprawdź zawartość właściwości LicenseStatus utworzonej przed chwilą zmiennej.
+
+4.      Liczba znajdująca się w tej właściwości oznacza status aktywacji systemu windows. Mając na uwadze wartości umieszczone poniżej przygotuj konstrukcję switch, która wyświetli tekstowy ekwiwalent dla wartości liczbowej w $license.LicenseStatus:
+
+a.          0   "Unlicensed"
+
+b.          1   "Licensed"
+
+c.          2   "OOBGrace"
+
+d.          3   "OOTGrace"
+
+e.          4   "NonGenuineGrace"
+
+f.           5   "Notification"
+
+g.          6   "ExtendedGrace"
+
+5.      Zapisz wynik polecenia w zmiennej $licenseDescription.
+
+6.      Korzystając ze zmiennej wyświetl komunikat w postaci The system license status is … 

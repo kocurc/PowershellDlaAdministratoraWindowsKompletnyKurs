@@ -1,0 +1,31 @@
+1.      Zadeklaruj zmienną o nazwie MyService i przypisz do niej wartość „bits”
+
+2.      Wyświetl usługi o nazwie zgodnej z nazwą wpisaną do zmiennej MyService
+
+3.      Korzystając z poleceń dedykowanych do obsługi zmiennych zadeklaruj zmienne
+
+a.      EventLogName i przypisz jej wartość System
+
+b.      EventNumber i przypisz jej wartość 5
+
+4.      Zmień polecenie wyświetlające 3 ostatnie zdarzenia z aplikacyjnego dziennika zdarzeń, tak aby korzystało z wcześniej zdefiniowanych zmiennych:
+
+Get-EventLog -Newest 3 -LogName application
+
+5.      Wyświetl zawartość napędu  ENV: (Ten napęd zawiera zmienne środowiskowe zdefiniowane na danym komputerze. Można ich używać w swoich skryptach.)
+
+6.      Nie wykorzystując instrukcji dedykowanych do pracy ze zmiennymi (w uproszczony sposób – notacja z $) utwórz zmienne i przypisz im odpowiednie wartości:
+
+a.      MyComputerName
+
+b.      MyOperatingSystem
+
+c.      MyUserName
+
+Uwaga: Zmienne środowiskowe z napędu ENV: są w powershell traktowane jak pliki. Aby wczytać ich wartość posłuż się poleceniem Get-Content, np. tak:
+
+Get-Content -Path Env:\PROCESSOR_ARCHITECTURE
+
+7.      Do zmiennych środowiskowych można się również odwoływać przez zmienną $env. Pozwala to uprościć konstrukcje z poprzedniego zadania. Odwołaj się do tych samych zmiennych środowiskowych korzystając z notacji podobnej do:
+
+$env:PROCESSOR_ARCHITECTURE

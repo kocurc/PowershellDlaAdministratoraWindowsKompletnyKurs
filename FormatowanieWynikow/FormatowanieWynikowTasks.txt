@@ -1,0 +1,17 @@
+1.      Polecenie 
+        Get-WMIObject -Class Win32_Desktop 
+        wyświetla informacje o ustawieniach pulpitu dla użytkowników komputera
+
+2.      Wyświetl wynik w/w polecenia w postaci skróconego zestawienia (tylko same nazwy użytkowników)
+
+3.      Wyświetl wynik w postaci 3 kolumn
+
+4.      Sformatuj wynik do postaci tabeli
+
+5.      Wyświetl wynik polecenia w postaci listy
+
+6.      Wyświetl infromacje w postaci tabeli, ale na ekranie mają się pokazać tylko Name i informacje o konfiguracji wygaszacza ekranu
+
+7.      Wyświetl wyniki polecenia                
+         Get-WmiObject -Class win32_desktop  
+        w przeglądarce graficznej (GridView)

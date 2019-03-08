@@ -1,0 +1,25 @@
+1.      Chcesz w tle wykonać (długotrwałe) zadanie. Przygotuj polecenie, które z wykorzystaniem Start-Job:
+
+a.      Pobierze obiekt win32_LogicalDisk
+
+b.      Zapisze wynik  w pliku c:\temp\disks.txt
+
+2.      Przygotuj polecenie, które w tle uruchomi polecenie pobierające i=obiekt WMI odpowiedzialny za procesor. Skorzystaj przy tym wyłącznie z polecenia Get-WMIObject i jego opcji.
+
+3.      Przygotuj polecenie, które na komputerze zdalnym uruchomi Get-Service. Skorzystaj przy tym z polecenie Invoke-Command i jego opcji.
+
+4.      Wyświetl listę jobów uruchamianych w tle
+
+5.      Pobierz wynik job-a zdefiniowanego w kroku (2) tak aby wynik można było odczytywać jeszcze kolejny raz
+
+6.      Pobierz wynik wszystkich jobów. Zrób to w jednym poleceniu
+
+7.      Usuń jednym poleceniem wszystkie joby
+
+8.      Przygotuj trigger do uruchomienia zadania zaplanowanego o godzinie 14:00 codziennie (możesz dopasować godzinę do np. za 10 minut od teraz)
+
+9.      Zarejestruj planowane zadanie, które zostanie wyzwolone triggerem z poprzedniego punktu, które pobierze informacje o dyskach logicznych i zapisze je w pliku w c:\ temp
+
+10.   Wyświetl listę zdefiniowanych zadań
+
+11.   Poczekaj aż zadanie się wykonana a potem wyrejestruj je

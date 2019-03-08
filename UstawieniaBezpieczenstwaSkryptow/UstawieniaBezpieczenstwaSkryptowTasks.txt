@@ -1,0 +1,23 @@
+1.      Utwórz skrypt zawierający następujące polecenie:
+
+Get-WMIObject win32_Processor | Select CurrentClockSpeed
+
+Zapisz go na dysku jako c:\temp\MyScript.ps1
+
+2.      Sprawdź Execution Policy.
+
+3.      Zmień Execution Policy na AllSigned
+
+4.      Spróbuj uruchomić skrypt korzystając ze ścieżki bezwzględnej i względnej
+
+5.      Uruchom powershell.exe przekazując do niego parametr pozwalający na uruchamianie lokalnych niepodpisanych skryptów
+
+6.      Uruchom w nowej powłoce swój skrypt
+
+7.      Zamknij powłokę otwartą w punkcie (5)
+
+8.      Zmień ExecutionPolicy na RemoteSigned
+
+9.      Sprawdź tak jak w pkt 4, czy skrypt teraz się uruchamia
+
+10.   [Powtórz kroki zaprezentowane w 5’ filmu w celu wygenerowania certyfikatu do podpisywania kodu i podpisz nim swój skrypt, a następnie sprawdź jego działanie.]

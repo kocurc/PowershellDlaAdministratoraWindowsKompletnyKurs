@@ -1,0 +1,33 @@
+1.      Wyświetl dostępne na systemie napędy PowerShell (PSDrive)
+
+2.      Utwórz katalog C:\PowershellLib i zapisz w nim właśnie tworzony skrypt
+
+3.      Utwórz nowy napęd wirtualny PowerShell o nazwie Lib wskazujący na utworzony przed chwilą folder
+
+4.      Wylistuj zawartość tego katalogu
+
+5.      Wyświetl listę załadowanych modułów
+
+6.      Wyświetl listę dostępnych modułów
+
+7.      Wyświetl listę poleceń znajdujących się w module NetTCPIP
+
+8.      Sprawdź działanie poleceń Get-NetIPAddress
+
+9.      Sprawdź listę załadowanych modułów. Powinien się na niej znaleźć także NetTCPIP, który został załadowany automatycznie, bez użycia Import-Module, podczas uruchamiania polecenia z tego modułu.
+
+10.   Usuń moduł z pamięci i zweryfikuj, że moduł został poprawnie wyładowany z pamięci
+
+11.   Przejdź do rejestru do HKEY_LOCAL_MACHINE:\Software
+
+12.   Utwórz nowy klucz rejestru o nazwie TestSoft
+
+13.   Dodaj dwie wartości do klucza rejestru:  Edition – typu string – o wartości ‘Professional’ i Version – typu DWord – o wartości 10
+
+14.   Wyświetl wszystkie właściwości w kluczu TestSoft
+
+15.   Wyświetl wartość właściwości Edition
+
+16.   Zmień wartość właściwości Edition na ‘Enterprise’
+
+17.   Usuń właściwość Version Usuń klucz TestSoft i wróć na dysk C:

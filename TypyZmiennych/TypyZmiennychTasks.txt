@@ -1,0 +1,27 @@
+1.      Twoim zdaniem jest utworzenie zmiennej, która może dalej posłużyć jako nazwa pliku identyfikujaca kiedy plik powstał. Zadeklaruj zmienną napisową typu string o nazwie LogFile.
+
+2.      Korzystając z literałów YYYY_MM_DD oraz metody ToString typu DateTime wyświetl aktualna datę w postaci odpowiednio sformatowanego napisu
+
+3.      Zainicjuj zmienną $LogFile wartością bieżącej daty – czyli połącz to co zostało zrobione w punkcie (1) oraz (2)
+
+4.      Zmodyfikuj odpowiednio polecenie z poprzedniego punktu tak aby oprócz daty zmienna zawierała też godzinę.
+
+5.      Twoim zadaniem jest zmierzenie czasu, przez który będzie pracować pewna aplikacja (u nas notepad). Zadeklaruj zmienne typu Datetime:
+
+a.      $StartTime
+
+b.      $StopTime
+
+6.      Przypisz do zmiennej $StartTime bieżący czas
+
+7.      Korzystając z polecenia poniżej uruchom notatnik:
+
+Start-Process -FilePath "notepad.exe"  -Wait
+
+(Komenda uruchamia notatnik, ale nie kończy sie od razu, tylko czeka na zakończenie uruchomionego procesu.
+
+8.      Przypisz do Zmiennej $StopTime bieżączy czas.
+
+9.      Zadeklaruj zmienną $TimeSpent typu TimeSpan i przypisz jej różnicę między StopTime a $StartTime. Użyj metody Subtract wywoływanej na rzecz $StopTime, która wyznaczy poszukiwaną różnicę
+
+10.   Wyświetl wyznaczoną różnicę w sekundach. 

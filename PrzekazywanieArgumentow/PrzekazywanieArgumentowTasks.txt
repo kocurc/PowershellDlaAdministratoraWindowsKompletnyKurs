@@ -1,0 +1,15 @@
+1.      Polecenie Get-ItemProperty -Path HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Where { $_.DisplayName -ne $null } wyświetla listę zainstalowanych na komputerze aplikacji. Sprawdź działanie tego polecenia
+
+2.      Aby wyświetlić tylko wybrane informacje z tej listy dodaj w potoku polecenie, które pokaże jedynie: DisplayName, Publisher, DisplayVersion, InstallDate
+
+3.      Aby wyświetlić zainstalowane oprogramowanie w bardziej czytelnej postaci dodaj w potoku polecenie sortowania w kolejności alfabetycznej wg DisplayName
+
+4.      Zadeklaruj zmienne
+
+a.      $DisplayName – zainicjuj ją wartością „C++” (w przypadku braku na komputerze aplikacji zawierającej w nazwie C++ zmień tę wartość na inną)
+
+b.      $Publisher – zainicjuj ją wartością „Microsoft”
+
+5.      Aby wyfiltrować tylko określone oprogramowanie dodaj do tworzonej komendy w potoku polecenie, które wyświetli tylko programy zawierające w nazwie $DisplayName i wydane przez dostawców, którzy w nazwie mają ciąg znaków znajdujący się w zmiennej $Publisher
+
+6.      Zmień polecenie tak, aby z wykorzystaniem remotingu można je było uruchomić na systemach zdalnych. Pamiętaj o poprawnym przekazaniu parametrów do polecenia zdalnego. Jako przykładowego komputera zdalnego użyj localhost.

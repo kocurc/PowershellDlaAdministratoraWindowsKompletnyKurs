@@ -1,0 +1,17 @@
+$subdirs = @( "01_Input", "02_Processing", "03_Results" )
+
+$BaseDir = 'C:\Users\kordi\Desktop\'
+
+$subdirs | ForEach { $_ }
+
+$subdirs | ForEach { $BaseDir + $_ }
+
+$subdirs | ForEach { New-Item -ItemType directory -Path $BaseDir$_ }
+
+$subdirs | Out-File C:\users\kordi\Desktop\subdirs.txt
+
+Get-Content C:\users\kordi\Desktop\subdirs.txt
+
+Get-Content C:\users\kordi\Desktop\subdirs.txt | ForEach { $BaseDir + $_ }
+
+Get-Content C:\users\kordi\Desktop\subdirs.txt | ForEach { New-Item -ItemType directory -Path $BaseDir$_ }

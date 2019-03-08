@@ -1,0 +1,18 @@
+Get-WmiObject -Namespace root -List -Recurse | select -Property Name | where {$_ -like '*network*'}
+
+Get-CimClass | where {$_.CimClassName -like '*network*'}
+
+Get-WmiObject -Class WIN32_NetworkAdapter
+Get-CimInstance -ClassName Win32_NetworkAdapter
+
+Get-WmiObject -Class Win32_NetworkAdapter | Get-Member
+Get-CimInstance -ClassName Win32_NetworkAdapter | Get-Member
+
+Get-WmiObject -Class Win32_NetworkAdapter | select -Property Caption, MACAddress
+Get-CimInstance -ClassName Win32_NetworkAdapter | select -Property Caption, MACAddress
+
+Get-WmiObject -Class Win32_BIOS | format-list *
+Get-CimInstance -ClassName Win32_BIOS | format-list *
+
+Get-WmiObject -Class Win32_UserAccount | where { $_.LocalAccount -eq "True" }
+Get-CimInstance -ClassName Win32_UserAccount | where { $_.LocalAccount -eq "True" }
