@@ -1,0 +1,23 @@
+$isAlive = Test-Connection -Quiet -ComputerName domKomp -Count 1
+
+If ($isAlive)
+{
+    Copy-Item -Path \\domKomp\c$\users\yyy\Desktop\testFile.txt -Destination \\domKomp2\c$\users\zzz\Desktop\testFile.txt
+}
+Else
+{
+    Write-Warning "Remote host is not responding"
+}
+
+$serviceStatus = Get-Service bits | select -Property Status
+
+Write-Host "Checking whether bits service is running"
+
+If ($serviceStatus -eq "Running")
+{
+    Write-Host "Service is already running"
+}
+Else
+{
+    Start-Service bits
+    Wr

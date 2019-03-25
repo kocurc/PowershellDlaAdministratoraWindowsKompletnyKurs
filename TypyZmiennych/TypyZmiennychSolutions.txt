@@ -1,0 +1,20 @@
+[string]$LogFile
+
+$date = Get-Date
+$date.ToString("yyyy_MM_dd")
+
+$LogFile = $date.ToString("yyyy_MM_dd")
+
+$LogFile = $date.ToString("yyyy_MM_dd hh")
+
+[datetime]$StartTime = Get-Date
+[datetime]$StopTime = Get-Date
+$StartTime = Get-Date
+Start-Process -FilePath "notepad.exe" -Wait
+
+$StopTime = Get-Date
+
+[TimeSpan]$TimeSpent = $StartTime - $StopTime
+$StopTime.Subtract($TimeSpent)
+
+$StopTime.ToString("ss")
