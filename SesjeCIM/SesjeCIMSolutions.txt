@@ -1,0 +1,31 @@
+1
+$computerName = $env:COMPUTERNAME
+$computerName
+
+2
+$sessionObject = New-CimSession -ComputerName xxx
+Get-CimInstance -ClassName WIN32_OperatingSystem -CimSession $sessionObject
+
+3
+Get-CimInstance -ClassName WIN32_Product -CimSession $sessionObject
+
+4
+-
+
+5
+Get-CimSession
+
+6
+Get-CimSession | Remove-CimSession
+
+7
+$sessionObject2 = New-CimSessionOption -Protocol DCOM
+
+8
+$sessionObject3 = New-CimSession -ComputerName xxx -SessionOption $sessionObject3
+
+9
+Get-CimInstance -ClassName WIN32_Printer -CimSession $sessionObject3
+
+10
+Get-CimSession | Remove-CimInstance

@@ -1,0 +1,18 @@
+1
+Get-ItemProperty -Path HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Where { $_.DisplayName -ne $null } 
+
+2
+Get-ItemProperty -Path HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Where { $_.DisplayName -ne $null } | select  DisplayName,Publisher,DisplayVersion,InstallDate | fl
+
+3
+Get-ItemProperty -Path HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Where { $_.DisplayName -ne $null } | select  DisplayName,Publisher,DisplayVersion,InstallDate | sort -Property DisplayName | fl
+
+4
+$DisplayName = "C++"
+$Publisher = "Microsoft"
+
+5
+Get-ItemProperty -Path HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Where { $_.DisplayName -like "*$DisplayName*" -and $_.Publisher -like "*$Publisher*" } | select  DisplayName,Publisher,DisplayVersion,InstallDate | sort -Property DisplayName |  fl
+
+6
+Invoke-Command -ComputerName localhost -Credential $cred -ScriptBlock { Param($displayName, $publisher) Get-ItemProperty -Path HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Where { $_.DisplayName -like "*$displayName*" -and $_.Publisher -like "*$publisher*" } | select  DisplayName,Publisher,DisplayVersion,InstallDate | sort -Property DisplayName |  fl } -ArgumentList ($displayName, $publisher)

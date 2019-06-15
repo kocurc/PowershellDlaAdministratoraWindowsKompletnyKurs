@@ -1,0 +1,26 @@
+1
+Get-CimClass -ClassName Win32_NetworkAdapter
+
+2
+Get-CimClass -ClassName Win32_NetworkAdapter | Get-Member
+
+3
+Get-CimInstance -ClassName Win32_NetworkAdapter -Filter "Name='Adapter'"
+
+4
+Get-CimInstance -ClassName Win32_NetworkAdapter -Filter "Name='Adapter'" | Invoke-CimMethod -ClassName Win32_NetworkAdapter -MethodName Disable
+
+5
+Get-CimInstance -ClassName Win32_NetworkAdapter -Filter "Name='Adapter'" | Invoke-CimMethod -ClassName Win32_NetworkAdapter -MethodName Enable
+
+6
+Get-WmiObject -Class Win32_NetworkAdapter | where DHCPEnabled
+
+7
+Get-WmiObject -Class Win32_NetworkAdapterConfiguration | Where-Object DHCPEnabled | Get-Member
+
+8
+Get-WmiObject -Class Win32_NetworkAdapterConfiguration | where DHCPEnable | Invoke-WmiMethod -Name ReleaseDHCPLease Adapter
+
+9
+Get-WmiObject -Class Win32_NetworkAdapterConfiguration | where DHCPEnable | Invoke-WmiMethod -Name RenewDHCPLease

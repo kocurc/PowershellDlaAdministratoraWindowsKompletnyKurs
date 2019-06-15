@@ -1,0 +1,38 @@
+1:
+-
+
+2:
+$i = 0
+$max = 30
+
+3:
+$sourceFileName = 'C:\Users\kordi\Desktop\master.txt'
+
+4:
+"This is a master configuration file" > C:\Users\kordi\Desktop\master.txt
+
+5:
+$destinationFolder = 'C:\Users\kordi\Desktop\distribution'
+
+6:
+if (-not (Test-Path -Path $destinationFolder))
+{
+    New-Item -Path $destinationFolder -ItemType "directory"
+}
+
+7:
+8:
+while ($i -lt $max)
+{
+    $i++
+}
+
+9:
+$destinationFile = $i.txt
+
+10:
+$newFileName = Join-Path -Path $destinationFolder -ChildPath $destinationFile
+
+11:
+Copy-Item $sourceFileName $newFileName
+Write-Host "File has been created"

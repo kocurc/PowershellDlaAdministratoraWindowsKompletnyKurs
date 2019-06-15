@@ -1,15 +1,22 @@
-1.      Do katalogu c:\temp wgraj kilka plików o różnych datach modyfikacji. Dalszą cześć zadań dopasuj do tych dat. Celem mogło by być przygotowanie skryptu, który będzie z określonego folderu przenosił lub usuwał pliki starsze niż określona data. Aby zadanie miało charakter powtarzalny, my zdecydujemy się tylko wyświetlać te pliki.
+1
+C:\Users\xxx\Desktop\Test
 
-2.      Przygotuj polecenie, które wyświetli pliki starsze niż 2016-09-16 (dopasuj datę tak, aby tylko część plików była wyświetlana).
+2
+Get-ChildItem C:\Users\xxx\Desktop\Test | Where-Object -Property LastWriteTime -GT '2017-12-12'
 
-3.      Zamień stałe odpowiadające za ścieżkę katalogu oraz datę na zmienne, które należy zadeklarować na początku tworzonego skryptu. Popraw deklaracje tak, aby zmienne miały jawnie określony typ i przypisz im wartości.
+3
+[string]$FolderPath='C:\Users\xxx\Desktop\Test'
+[DateTime]$LastWriteDate=(Get-Date).AddYears(-1)
 
-4.      Zastąp stałe używane w poleceniu z punktu (2) na zmienne zadeklarowane w punkcie (3).
+4
+Get-ChildItem $FolderPath | Where-Object -Property LastWriteTime -GT $LastWriteDate
 
-5.      Zmień deklaracje zmiennych z punktu (3) na definicje parametrów skryptu. Pamiętaj o zastosowaniu modyfikatorów jak: cmdbinding, mandatory oraz określeniu wartości domyślnych tam gdzie ma to sens. Zapisz skrypt w pliku o nazwie FilesOlderThan.ps1
+5
 
-6.      Sprawdź działanie przygotowanego skryptu.
+6
 
-7.      Zmień swój skrypt w funkcję Get-FilesOlderThan i zapisz w pliku o nazwie utilities.psm1
+7
 
-8.      W nowym oknie powershell załaduj moduł do pamięci i uruchom funkcję
+8
+Import-Module .\utilities.psm1
+Get-FilesOlderThan -FolderPath C:\Users\xxx\Desktop\Test -LastWriteDate 2018-12-12

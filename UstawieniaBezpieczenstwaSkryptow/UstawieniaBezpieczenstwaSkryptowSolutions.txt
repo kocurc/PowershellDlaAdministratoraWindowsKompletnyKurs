@@ -1,0 +1,43 @@
+1
+
+
+
+2
+
+Get-ExecutionPolicy
+
+3
+
+Set-ExecutionPolicy AllSigned -Force
+
+4
+
+.\MyScript.ps1
+C:\Users\xxx\Desktop\MyScript.ps1
+
+5
+
+powershell -ExecutionPolicy RemoteSigned
+
+6
+
+
+.\MyScript.ps1
+
+
+7
+
+
+
+8
+
+Set-ExecutionPolicy RemoteSigned
+
+
+9
+
+.\MyScript.ps1
+C:\Users\xxx\Desktop\MyScript.ps1
+
+10
+

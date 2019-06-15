@@ -1,0 +1,20 @@
+1
+Enable-PSRemoting -SkipNetworkProfileCheck
+
+2
+Enter-PSSession -ComputerName xxx
+
+3
+echo $env:COMPUTERNAME
+
+4
+Exit-PSSession
+
+5
+Invoke-Command -ComputerName xxxx -ScriptBlock { $env:COMPUTERNAME }
+
+6
+Invoke-Command -ComputerName xxxx -ScriptBlock { Get-WmiObject -Class win32_operatingSystem } | Get-Member
+
+7
+Invoke-Command -ComputerName xxxx -ScriptBlock { Get-WmiObject -Class win32_operatingSystem } | Select-Object PSComputerName

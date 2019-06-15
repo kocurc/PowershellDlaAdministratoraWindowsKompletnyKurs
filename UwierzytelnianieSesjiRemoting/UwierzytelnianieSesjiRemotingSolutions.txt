@@ -1,0 +1,27 @@
+1
+Get-Credential
+
+2
+Get-Credential -Message "Enter username and password from MYDOMAIN"
+
+3
+$adminCred = Get-Credential -Message "Enter Password" -UserName "$($env:COMPUTERNAME)\Administrator"
+
+4
+ls WSMan:\localhost\Client
+
+5
+Get-Item -Path WSMan:\localhost\Client\TrustedHosts
+
+6
+Set-Item -Path WSMan:\localhost\Client\TrustedHosts -Value '*'
+
+7
+Get-Item -Path WSMan:\localhost\Client\TrustedHosts
+
+8
+$currentValue = Get-Item -Path WSMan:\localhost\Client\TrustedHosts
+$currentValue
+
+9
+Invoke-Command -ComputerName localhost -Credential $adminCred -ScriptBlock { echo "Current user is $($env:USERNAME)" }

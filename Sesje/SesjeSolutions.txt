@@ -1,0 +1,28 @@
+1
+$sessionComp1 = New-PSSession -ComputerName localhost
+$sessionComp2 = New-PSSession -ComputerName localhost
+
+2
+Get-PSSession
+
+3
+Invoke-Command -Session $sessionComp1 -ScriptBlock { $bitsStatus = (Get-Service BITS).Status }
+
+4
+Invoke-Command -Session $sessionComp1 -ScriptBlock { $bitsStatus = (Get-Service BITS).Status }
+
+5
+Invoke-Command -Session $sessionComp2 -ScriptBlock { $wsearchStatus = (Get-Service wsearch).Status }
+
+6
+$wsearchStatus = (Invoke-Command -Session $sessionComp2 -ScriptBlock { (Get-Service wsearch).Status }).Value
+
+7
+if ($bitsStatus1 -eq 'stopped' -and $wsearchStatus -eq 'running')
+{
+    Invoke-Command -Session $sessionComp1 -ScriptBlock { Start-Service BITS }
+    Invoke-Command -Session $sessionComp1 -ScriptBlock { Stop-Service WSearch }
+}
+
+8
+Get-PSSession | Remove-PSSession

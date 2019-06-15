@@ -1,0 +1,28 @@
+1:
+#C:\Users\kordi\Desktop\Test\
+
+2:
+$files = Get-ChildItem C:\Users\kordi\Desktop\Test\
+
+3:
+foreach ($file in $files)
+{
+    $file.Encrypt()
+    $file.ReadOnly = $true
+}
+
+4:
+
+5:
+foreach ($file in $files)
+{
+    $file.Decrypt()
+    $file.IsReadOnly = $false
+}
+
+6:
+for ($i = 0; $i -lt 5; $i++)
+{
+    [console]::beep(500,300)
+    Start-Sleep -Seconds 1
+}

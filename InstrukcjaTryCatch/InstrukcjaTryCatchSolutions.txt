@@ -1,0 +1,31 @@
+"" | Out-File C:\Users\kordi\Desktop\FileToCopy.txt
+
+Copy-Item C:\Users\kordi\Desktop\FileToCopy.txt \\server01\C$\temp\NewFile.txt
+
+try
+{
+    Copy-Item C:\Users\kordi\Desktop\FileToCopy.txt \\server01\C$\temp\NewFile.txt
+}
+catch
+{
+    Write-Host "Houston we have error."
+}
+
+try
+{
+    Copy-Item C:\Users\kordi\Desktop\FileToCopy.txt \\server01\C$\temp\NewFile.txt
+}
+catch
+{
+    Write-Host $Error[0].Exception.Message
+}
+
+try
+{
+    Copy-Item C:\Users\kordi\Desktop\FileToCopy.txt \\server01\C$\temp\NewFile.txt
+    Write-Host "file copied"
+}
+catch
+{
+    Write-Host $Error[0].Exception.Message
+}

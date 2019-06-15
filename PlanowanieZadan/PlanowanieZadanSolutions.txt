@@ -1,0 +1,34 @@
+1
+Get-WmiObject -Class win32_LogicalDisk-ComputerName kotKomp -AsJob
+
+Get-WmiObject -Class win32_LogicalDisk-ComputerName kotKomp -AsJob | out-file c:\temp\disks.txt
+
+2
+$obj = Get-WmiObject -Class win32_Processor -ComputerName xxx -AsJob
+
+3
+Invoke-Command -ComputerName xxx -ScriptBlock { Get-Service } -AsJob
+
+4
+Get-Job
+
+5
+Receive-Job -Id 1 -Keep
+
+6
+Get-Job | Receive-Job
+
+7
+Get-Job | Remove-Job
+
+8
+$trigDaily = New-JobTrigger -Daily -At 2pm
+
+9
+Register-ScheduledJob -ScriptBlock { Get-WmiObject -Class Win32_OperatingSsystem | Select-Object FreePhysicalMemory >> c:\temp.disks.txt } -Trigger $trigDaily -Name "Memory usage report"
+
+10
+Get-ScheduledJob
+
+11
+Unregister-ScheduledTask -TaskName "Memory usage report"

@@ -1,0 +1,29 @@
+Get-WmiObject -Class SoftwareLicensingProduct -Filter "Name LIKE '%Windows%' AND PartialProductKey <> null"
+
+$licence = Get-WmiObject -Class SoftwareLicensingProduct -Filter "Name LIKE '%Windows%' AND PartialProductKey <> null"
+
+$licence.LicenseStatus
+
+switch($licence.LicenseStatus)
+{
+    0 { Write-Host "Unlicensed" }
+    1 { Write-Host "Licensed" }
+    2 { Write-Host "OOBGrace" }
+    3 { Write-Host "OOTGrace" }
+    4 { Write-Host "NonGenuineGrace" }
+    5 { Write-Host "Notification" }
+    6 { Write-Host "ExtendedGrace" }
+}
+
+switch($licence.LicenseStatus)
+{
+    0 { $licenseDescription = "Unlicensed" }
+    1 { $licenseDescription = "Licensed" }
+    2 { $licenseDescription = "OOBGrace" }
+    3 { $licenseDescription = "OOTGrace" }
+    4 { $licenseDescription = "NonGenuineGrace" }
+    5 { $licenseDescription = "Notification" }
+    6 { $licenseDescription = "ExtendedGrace" }
+}
+
+Write-Host "The system license status is $licenseDescription"

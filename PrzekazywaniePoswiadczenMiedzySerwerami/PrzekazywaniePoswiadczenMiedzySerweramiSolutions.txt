@@ -1,0 +1,31 @@
+1
+winrm s winrm/config/client '@{TrustedHosts="localhost"}'
+
+2
+
+3
+Get-WSManCredSSP
+Disable-WSManCredSSP
+
+4
+Enter-PSSession -ComputerName localhost
+
+5
+Invoke-Command -ComputerName localhost -ScriptBlock { Get-Date }
+
+6
+Exit-PSSession
+
+7
+Enable-WSManCredSSP -Role Server
+Enable-WSManCredSSP -Role Client -DelegateComputer xxx
+
+8
+Get-WSManCredSSP
+
+9
+Enter-PSSession -ComputerName localhost -Authentication Credssp -Credential (Get-Credential)
+
+10
+Invoke-Command -ComputerName localhost -ScriptBlock { Get-Date }
+Exit-PSSession
